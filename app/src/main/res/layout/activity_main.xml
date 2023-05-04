@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sceneary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/editInputAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="@color/white"
+            android:hint="$"
+            android:inputType="numberDecimal"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+        
+        <TextView
+            android:id="@+id/textNumPax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/numOfPax"
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
+
+        <EditText
+            android:id="@+id/editInputPax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Number of people:"
+            android:textColorHint="@color/white"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tbSvs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Svs"
+            android:textOff="@string/svsDisabled"
+            android:textOn="@string/svsEnabled" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbGst"
+            android:layout_weight="1"
+            android:textOff="@string/gstDisabled"
+            android:textOn="@string/gstEnabled"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/viewDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/discount"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editInputDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="%"
+            android:textColorHint="@color/white"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
+        
+        <RadioGroup
+            android:id="@+id/radioGroupPayment"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonPaymentCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPaymentPayNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/payNow"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonSplit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/split" />
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"/>
+        
+        <TextView
+            android:id="@+id/viewTotalBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/totalBill"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/viewEachPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eachPay"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+    
+
+
+
+</LinearLayout>
