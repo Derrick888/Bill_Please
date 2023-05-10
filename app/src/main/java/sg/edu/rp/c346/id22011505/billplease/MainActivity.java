@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etamtInput;
 
-    TextView paxDisplay;
+
 
     EditText etpaxInput;
 
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     ToggleButton tbtngst;
 
-    TextView discDisplay;
 
     EditText etDiscount;
 
@@ -51,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
         amtDisplay = findViewById(R.id.textAmount);
         etamtInput = findViewById(R.id.editInputAmount);
-        paxDisplay = findViewById(R.id.textNumPax);
+
         etpaxInput = findViewById(R.id.editInputPax);
         tbtnsvs = findViewById(R.id.tbSvs);
         tbtngst = findViewById(R.id.tbGst);
-        discDisplay= findViewById(R.id.viewDiscount);
+
         etDiscount = findViewById(R.id.editInputDiscount);
         rgPayment = findViewById(R.id.radioGroupPayment);
         totalDisplay = findViewById(R.id.viewTotalBill);
@@ -108,6 +107,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etamtInput.setText("");
+                etpaxInput.setText("");
+                tbtnsvs.setChecked(false);
+                tbtngst.setChecked(false);
+                etDiscount.setText("");
             }
         });
 
